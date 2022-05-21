@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const phoneData = require('../data/phones.json');
 
+//route to get all phones
 router.get('/', async (req, res) => {
     res.status(200).json(phoneData);
 /*     phoneData
@@ -17,6 +18,7 @@ router.get('/', async (req, res) => {
     console.log(phoneData) */
 });
 
+//route to get one specific phone
 router.get('/:id', async (req, res) => {
     const phoneData_id = req.params.id
     /* console.log(phoneData_id) */
